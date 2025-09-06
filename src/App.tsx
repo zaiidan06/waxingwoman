@@ -573,11 +573,11 @@ function App() {
                 </div>
               </div>
               {/* Konten Deskripsi */}
-              <p className="text-lg text-gray-600 mb-6 text-center lg:text-left">
-                Dengan pengalaman lebih dari 10 tahun, WaxingWoman telah menjadi pilihan utama untuk layanan waxing profesional di Indonesia. Kami berkomitmen memberikan pelayanan terbaik dengan standar kebersihan tinggi.
+              <p className="text-lg text-gray-600 mb-6 text-justify lg:text-left">
+                Dengan pengalaman lebih dari 10 tahun, WaxingWoman telah menjadi pilihan utama untuk layanan waxing profesional di Indonesia. Kami berkomitmen untuk memberikan pelayanan terbaik dengan standar kebersihan tinggi.
               </p>  
               {/* Features List */}
-              <div className="space-y-4">
+              <div className="space-y-4 pt-8">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-pink-500 mt-1 flex-shrink-0" />
                   <div>
@@ -957,9 +957,9 @@ function App() {
             Dapatkan kulit halus dan mulus dengan layanan waxing profesional kami. 
             Book sekarang dan dapatkan penawaran spesial!
           </p>
-          <div className="flex flex-col sm:flexRow gap-4 justify-center">
+          <div className="grid grid-cols-1 lg:flex lg:flex-col-2 sm:flexRow gap-4 justify-center">
             <Button 
-              className="px-8 py-4 text-lg bg-white text-pink-600 hover:bg-gray-100 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 z-10 relative"
+              className="px-8 py-4 text-lg bg-white text-pink-600 hover:bg-gray-100 rounded-full shadow-lg transform transition-all duration-300 z-10 relative"
               onClick={() => {
                 console.log('Hubungi Kami Sekarang clicked!');
                 window.open('https://wa.me/6287884808447?text=Halo, saya ingin booking layanan waxing sekarang!', '_blank');
