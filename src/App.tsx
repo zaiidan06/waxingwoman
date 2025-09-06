@@ -336,89 +336,91 @@ function App() {
       
       {/* Hero Section - DIPERBAIKI */}
       <section id="home" className="relative h-screen flex items-center justify-center mt-0 w-full overflow-hidden">
-        {/* Background Slider */}
-        <div className="absolute inset-0 z-0">
-          {backgroundImages.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
-                index === currentBackground ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{ backgroundImage: `url(${image})` }}
-            />
-          ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-pink-900/50"></div>
-        </div>
-        
-        {/* Konten Hero - Z-INDEX DIPERBAIKI */}
-        <div className="container mx-auto px-6 z-20 text-white w-full relative">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 mt-12 leading-tight animate-fade-in">
-              SELAMAT DATANG
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 animate-fade-in-delay">
-              Nikmati layanan waxing terbaik kami dengan mudah, cepat, dan nyaman.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-2">
-              <Button 
-                className="w-fit px-8 py-4 text-lg bg-pink-500 hover:bg-pink-600 text-white rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 z-30 relative"
-                onClick={() => {
-                  console.log('Pesan Sekarang clicked!');
-                  window.open('https://wa.me/6287884808447?text=Halo, saya ingin booking layanan waxing', '_blank');
-                }}
-              >
-                Pesan Sekarang!
-                <ArrowRight size={20} />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="w-fit px-8 py-4 text-lg border-white text-black hover:bg-white hover:text-pink-600 rounded-full z-30 relative"
-                onClick={() => {
-                  console.log('Lihat Layanan clicked!');
-                  document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Lihat Layanan
-              </Button>
-            </div>
-            
-            {/* Benefits List */}
-            <div className="mt-10 flex flex-col gap-3 animate-fade-in-delay-3">
-              <div className="flex items-center gap-2">
-                <CheckCircle size={20} className="text-pink-300 animate-bounce-slow" />
-                <span className="text-lg">Hygienis dan steril</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle size={20} className="text-pink-300 animate-bounce-slow" />
-                <span className="text-lg">Teknologi terbaru</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle size={20} className="text-pink-300 animate-bounce-slow" />
-                <span className="text-lg">Terapis profesional</span>
-              </div>
-            </div>
-            </div>
-        </div>
-        
-        {/* Scroll Down Indicator */}
-        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-20 animate-bounce hidden sm:flex">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+        <div className="w-full px-32">
+          {/* Background Slider */}
+          <div className="absolute inset-0 z-0">
+            {backgroundImages.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+                  index === currentBackground ? 'opacity-100' : 'opacity-0'
+                }`}
+                style={{ backgroundImage: `url(${image})` }}
+              />
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-pink-900/50"></div>
           </div>
-        </div>
-
-        {/* Background Slider Indicators */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20 hidden sm:flex">
-          {backgroundImages.map((_, index) => (
-            <button
-              key={index}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentBackground ? 'bg-pink-500 scale-125' : 'bg-white/50'
-              }`}
-              onClick={() => setCurrentBackground(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          
+          {/* Konten Hero - Z-INDEX DIPERBAIKI */}
+          <div className="container mx-auto px-6 z-20 text-white w-full relative">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 mt-12 leading-tight animate-fade-in">
+                SELAMAT DATANG
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 animate-fade-in-delay">
+                Nikmati layanan waxing terbaik kami dengan mudah, cepat, dan nyaman.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-2">
+                <Button 
+                  className="w-fit px-8 py-4 text-lg bg-pink-500 hover:bg-pink-600 text-white rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 flex items-center gap-2 z-30 relative"
+                  onClick={() => {
+                    console.log('Pesan Sekarang clicked!');
+                    window.open('https://wa.me/6287884808447?text=Halo, saya ingin booking layanan waxing', '_blank');
+                  }}
+                >
+                  Pesan Sekarang!
+                  <ArrowRight size={20} />
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="w-fit px-8 py-4 text-lg border-white text-black hover:bg-white hover:text-pink-600 rounded-full z-30 relative"
+                  onClick={() => {
+                    console.log('Lihat Layanan clicked!');
+                    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Lihat Layanan
+                </Button>
+              </div>
+                
+              {/* Benefits List */}
+              <div className="mt-10 flex flex-col gap-3 animate-fade-in-delay-3">
+                <div className="flex items-center gap-2">
+                  <CheckCircle size={20} className="text-pink-300 animate-bounce-slow" />
+                  <span className="text-lg">Hygienis dan steril</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle size={20} className="text-pink-300 animate-bounce-slow" />
+                  <span className="text-lg">Teknologi terbaru</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle size={20} className="text-pink-300 animate-bounce-slow" />
+                  <span className="text-lg">Terapis profesional</span>
+                </div>
+              </div>
+              </div>
+          </div>
+                
+          {/* Scroll Down Indicator */}
+          <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-20 animate-bounce hidden sm:flex">
+            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+            </div>
+          </div>
+                
+          {/* Background Slider Indicators */}
+          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20 hidden sm:flex">
+            {backgroundImages.map((_, index) => (
+              <button
+                key={index}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentBackground ? 'bg-pink-500 scale-125' : 'bg-white/50'
+                }`}
+                onClick={() => setCurrentBackground(index)}
+                aria-label={`Go to slide ${index + 1}`}
+                />
+            ))}
+          </div>
         </div>
       </section>
 
