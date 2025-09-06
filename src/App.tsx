@@ -384,7 +384,7 @@ function App() {
               </div>
                 
               {/* Benefits List */}
-              <div className="mt-10 flex flex-col gap-3 animate-fade-in-delay-3 hidden sm:flex">
+              <div className="mt-10 flex flex-col gap-3 animate-fade-in-delay-3">
                 <div className="flex items-center gap-2">
                   <CheckCircle size={20} className="text-pink-300 animate-bounce-slow" />
                   <span className="text-lg">Hygienis dan steril</span>
@@ -546,32 +546,54 @@ function App() {
         </div>
       </AnimatedSection>
 
-      {/* About Section - SECTION BARU */}
+      {/* About Section - Exact Layout Requested */}
       <AnimatedSection className="py-16 bg-pink-50" sectionId="about">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Tentang WaxingWoman</h2>
-              <p className="text-lg text-gray-600 mb-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">              
+          {/* Grid Container untuk Desktop */}
+          <div className="lg:grid lg:grid-cols-2 lg:gap-12">            
+            {/* Left Column - Judul + Konten */}
+            <div className="lg:col-span-1">
+              {/* Judul - Desktop: kiri atas, Mobile: center */}
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center lg:text-left">
+                Tentang WaxingWoman
+              </h2>    
+              {/* Gambar - Hanya untuk Mobile */}
+              <div className="lg:hidden mb-6">
+                <div className="relative">
+                  <div className="aspect-video bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="https://remedytupelo.com/storage/2022/11/10-Things-To-Know-Before-Getting-Your-Facial-Waxing-scaled.jpeg" 
+                      alt="Waxing Woman" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center">
+                    <Star className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+              </div>
+              {/* Konten Deskripsi */}
+              <p className="text-lg text-gray-600 mb-6 text-center lg:text-left">
                 Dengan pengalaman lebih dari 10 tahun, WaxingWoman telah menjadi pilihan utama untuk layanan waxing profesional di Indonesia. Kami berkomitmen memberikan pelayanan terbaik dengan standar kebersihan tinggi.
-              </p>
+              </p>  
+              {/* Features List */}
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-pink-500 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-pink-500 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Teknisi Bersertifikat</h4>
                     <p className="text-gray-600">Semua teknisi kami telah mendapatkan sertifikasi internasional</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-pink-500 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-pink-500 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Peralatan Modern</h4>
                     <p className="text-gray-600">Menggunakan teknologi terkini untuk hasil optimal</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-pink-500 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-pink-500 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-gray-900">Bahan Premium</h4>
                     <p className="text-gray-600">Hanya menggunakan produk wax berkualitas tinggi dan aman</p>
@@ -579,14 +601,21 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-pink-200 to-pink-300 rounded-3xl flex items-center justify-center">
-                <img src="https://remedytupelo.com/storage/2022/11/10-Things-To-Know-Before-Getting-Your-Facial-Waxing-scaled.jpeg" alt="Waxing Woman" className="w-full h-full object-cover rounded-xl"/>
+            {/* Right Column - Gambar untuk Desktop */}
+            <div className="hidden lg:flex lg:col-span-1 lg:items-start lg:justify-center">
+              <div className="relative">
+                <div className="aspect-square bg-gradient-to-br from-pink-200 to-pink-300 rounded-3xl flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="https://remedytupelo.com/storage/2022/11/10-Things-To-Know-Before-Getting-Your-Facial-Waxing-scaled.jpeg" 
+                    alt="Waxing Woman" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-pink-500 rounded-full flex items-center justify-center">
+                  <Star className="w-12 h-12 text-white" />
+                </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-pink-500 rounded-full flex items-center justify-center">
-                <Star className="w-12 h-12 text-white" />
-              </div>
-            </div>
+            </div>    
           </div>
         </div>
       </AnimatedSection>
