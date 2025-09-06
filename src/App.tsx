@@ -336,7 +336,7 @@ function App() {
       
       {/* Hero Section - DIPERBAIKI */}
       <section id="home" className="relative h-screen flex items-center justify-center mt-0 w-full overflow-hidden">
-        <div className="w-full px-32">
+        <div className="w-full sm:px-32">
           {/* Background Slider */}
           <div className="absolute inset-0 z-0">
             {backgroundImages.map((image, index) => (
@@ -373,7 +373,7 @@ function App() {
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="w-fit px-8 py-4 text-lg border-white text-black hover:bg-white hover:text-pink-600 rounded-full z-30 relative"
+                  className="w-fit px-8 py-4 text-lg border-white text-black hover:bg-white hover:text-pink-600 rounded-full z-30 relative hidden sm:flex"
                   onClick={() => {
                     console.log('Lihat Layanan clicked!');
                     document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
@@ -384,7 +384,7 @@ function App() {
               </div>
                 
               {/* Benefits List */}
-              <div className="mt-10 flex flex-col gap-3 animate-fade-in-delay-3">
+              <div className="mt-10 flex flex-col gap-3 animate-fade-in-delay-3 hidden sm:flex">
                 <div className="flex items-center gap-2">
                   <CheckCircle size={20} className="text-pink-300 animate-bounce-slow" />
                   <span className="text-lg">Hygienis dan steril</span>
